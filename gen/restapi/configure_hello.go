@@ -22,6 +22,7 @@ func configureFlags(api *hello.HelloAPI) {
 	// api.CommandLineOptionsGroups = []swag.CommandLineOptionsGroup{ ... }
 }
 
+// ⚡⚡ Add exposed configureAPI for httptest ⚡⚡
 func ConfigureAPI(api *hello.HelloAPI) http.Handler {
 	return configureAPI(api)
 }
