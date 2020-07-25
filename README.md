@@ -13,7 +13,7 @@ see `hello_test.go`
 
 ## How to use go-swagger serverside with httptest
 
-Add exposed function that return http.Handler in configure_${your-project}.go
+Add exposed function that return http.Handler in [configure_${your-project}.go](https://github.com/laqiiz/go-swagger-httptest/blob/master/gen/restapi/configure_hello.go#L25)
 
 ```go:restpi.configure_hello.go
 func ConfigureAPI(api *hello.HelloAPI) http.Handler {
@@ -21,7 +21,7 @@ func ConfigureAPI(api *hello.HelloAPI) http.Handler {
 }
 ```
 
-You create handler code in your test.
+You create handler in your [test code](https://github.com/laqiiz/go-swagger-httptest/blob/master/hello_test.go#L14).
 
 ```go hello_test.go
 func HelloHandler() (http.Handler, error) {
