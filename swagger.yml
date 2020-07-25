@@ -1,0 +1,37 @@
+swagger: "2.0"
+info:
+  description: "This is a sample server hello server."
+  version: "1.0.0"
+  title: "Swagger Hello Example"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+basePath: "/v1"
+tags:
+  - name: "Example"
+    description: "Example"
+schemes:
+  - "http"
+paths:
+  /hello:
+    get:
+      tags:
+        - "Example"
+      summary: "hello api"
+      description: ""
+      operationId: "hello"
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/Hello"
+definitions:
+  Hello:
+    type: "object"
+    properties:
+      message:
+        type: "string"
