@@ -31,16 +31,16 @@ func TestHello(t *testing.T) {
 	}
 
 	tests := []struct {
-		name string
-		handler   http.Handler
-		path string
+		name     string
+		handler  http.Handler
+		path     string
 		wantCode int
 		wantBody string
 	}{
 		{
-			name: "get hello",
-			handler:   handler,
-			path: "hello",
+			name:     "get hello",
+			handler:  handler,
+			path:     "hello",
 			wantCode: http.StatusOK,
 			wantBody: `{"message":"hello"}`,
 		},
@@ -52,7 +52,7 @@ func TestHello(t *testing.T) {
 			defer ts.Close()
 
 			// httptest request
-			resp, err := http.Get(ts.URL +  "/v1/hello")
+			resp, err := http.Get(ts.URL + "/v1/hello")
 			if err != nil {
 				t.Fatal(err)
 			}
